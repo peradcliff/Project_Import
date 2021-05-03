@@ -1,0 +1,235 @@
+<!--
+    Filename:         final.html
+    Supporting Javascript file: projectJS.js
+    Supporting CSS file: final_css.css 
+
+    Created by: Parker Radcliff
+    Date Created: 11/22/2020
+
+    Project Description:
+
+    It is time to put your knowledge of JavaScript to work. You’re going to build something useful that you 
+    may even use beyond the scope of this course. Your WEB 115 JavaScript Project requires you to create a personal 
+    resume building tool.
+    Form elements will be used to accept user input which will be assigned to variables. These variable values will 
+    make up the content of a new web page that will be generated when a form button named Create Resume is clicked. 
+    This is called building a web page "on-the-fly".
+
+    Tasks -- These were removed as the process continued and replaced with brief 1 sentence description. 
+    1. Do some research into resumes.
+    2. Create a document named finalProject.html. The title should read WEB-115 Final Project.
+    3. Create a banner for your HTML form that includes your name, course and section number. 
+    4. Create an external JavaScript document (with the .js file extension) named projectJS.js. 
+    5. Code the script element after the opening BODY tag that will link to external document: projectJS.js.
+    6. Test, then remove the alert() method. All of your JavaScript must appear in your external projectJS.js file.
+    7. Create the appropriate labels and text boxes that the user will use to populate their resume. Include a minimum of 8 entry areas.
+    8. Create the appropriate labels and text boxes so that the user can enter their skill set. Include a minimum of 3 entry areas for this category. 
+    9. Create the appropriate labels and text boxes so that the user can include technical skills such as JavaScript and PHP. Include a minimum of 2 entry areas for this category. 
+    10. Use the form textarea element to create a text entry area with the appropriate label so that the user knows to enter their Educational background.
+    11. Create a text box with the appropriate label so that the user knows to enter the entry and exit dates of their most recent employment experience. 
+    12. Use the form textarea tag to create a text entry area with the appropriate label so that the user knows to enter the details of their most recent employment experience.
+    13. Repeat steps 10 and 11 to allow for 2 more prior employment experience data entry areas. 
+    14. Use the form textarea tag to create a text entry area with the appropriate label so that the user knows to enter the details of their business references.
+    15. Create a form button named Create Resume. When clicked this button should call a function that generates a new web page displaying a resume based on unput.
+-->
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="final_css.css"> <!-- Connecting CSS file -->
+    <title>WEB-115 Final Project</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed>
+
+    <!-- #3, the header banner, I put my section and build your resume on the same, I find having them on the same line more visually appealing -->
+    <header class=banner>
+        <h1>Parker Radcliff</h1>
+        <h3>WEB-115 Section 0003 ||
+        Build Your Resume
+    </h3>
+    </header>
+
+    <!-- Fill in form below, contains personal and professional information -->
+    <form id="form">
+        <h2 class="personal">Personal Information</h2>
+        <label for="name">Enter Your Full Name:</label><br>
+        <input type="text" class="entry" name="name" size="65" required=""><br>
+
+        <label for="state">Enter Your State:</label><br>
+        <select name="state" id="state" required="">
+            <!-- this is a drop down list of all the States-->
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+        </select>
+        
+        <br>
+        <label for="city">Enter Your City:</label><br>
+        <input type="text" class="entry" name="city" size="65" required=""><br>
+        <!-- Social media was also thrown in here-->
+        <label for="instagram">Enter Your Instagram:</label><br>
+        <input type="text" class="entry" name="instagram" size="65" required=""><br>
+
+        <label for="twitter">Enter Your Twitter:</label><br>
+        <input type="text" class="entry" name="twitter" size="65" required=""><br>
+
+        <label for="linked">Enter Your LinkedIn:</label><br>
+        <input type="text" class="entry" name="linked" size="65" required=""><br>
+
+        <label for="phone">Enter Phone Number:</label><br>
+        <input type="text" class="entry" name="phone" size="65" required=""><br>
+
+        <label for="email">Enter Your Email Address:</label><br>
+        <input type="text" class="entry" name="email" size="65" validateEmail() required><br>
+
+        <!-- Education details -->
+        <h2>Education</h2>
+        <label for="highschool">Enter High School Attended:</label><br>
+        <input type="text" class="entry" name="highschool" size="65" required=""><br>
+       
+        <label for="year1">Enter Graduation Year:</label><br>
+        <input type="text" class="entry" name="year1" size="65" required=""><br>
+       
+        <label for="college">Enter College Attended:</label><br>
+        <input type="text" class="entry" name="college" size="65" required=""><br>
+
+        <label for="year2">Enter Graduation Year:</label><br>
+        <input type="text" class="entry" name="year2" size="65" required=""><br>
+
+        <label for="degree">Enter Degree Type:</label><br>
+        <input type="text" class="entry" name="degree" size="65">
+        
+
+        <!-- Not very long, but can be adjusted to see more on the page. Just a tiny blurb necessary -->
+        <h2>Professional Summary</h2>
+        <label for="summary">Enter Your Professional Summary:</label><br>
+        <textarea id="summary" class="entry" cols="67" rows="4"></textarea>
+
+        <!-- Skills besides coding, all three required to enter -->
+        <h2>Skills</h2>
+        <label for="skill1">Skill 1:</label><br>
+        <input type="text" class="entry" name="skill1" size="65" required=""><br>
+        <label for="skill2">Skill 2:</label><br>
+        <input type="text" class="entry" name="skill2" size="65" required=""><br>
+        <label for="skill3">Skill 3:</label><br>
+        <input type="text" class="entry" name="skill3" size="65" required="">
+
+        <!-- Tech. skills, all three are required to enter -->
+        <h2>Technical Skills</h2>
+        <label for="tech_skill1">Technical Skill 1:</label><br>
+        <input type="text" class="entry" name="tech_skill1" size="65" required=""><br>
+        <label for="tech_skill2">Technical Skill 2:</label><br>
+        <input type="text" class="entry" name="tech_skill2" size="65" required=""><br>
+        <label for="tech_skill3">Technical Skill 3:</label><br>
+        <input type="text" class="entry" name="tech_skill3" size="65" required="">
+
+        <!-- Working history of the user. I saw a lot of people did three+, however I only chose to do 2. 1 is required, the second is optional -->
+        <div class="container1">
+            <h2>Work History</h2>
+            <div class="one1">
+                <label for="work1">Work Place:</label><br>
+                <input type="text" class="entry" name="work1" size="65" required=""><br>
+            
+                <label for="job1">Job Title:</label><br>
+                <input type="text" class="entry" name="job1" size="65" required=""><br>
+            
+                <label for="desc1">Job Description:</label><br>
+                <input type="text" class="entry" name="desc1" size="65" required=""><br>
+            
+                <label for="dateStart1">Start Date:</label>
+                <input type="date" name="dateStart1" id="dateStart1" required="">
+                <label for="dateEnd1" style="padding-left:15px">End Date:</label>
+                <input type="date" name="dateEnd1" id="dateEnd1" required="">
+                <br><br>
+            </div>
+            
+            <div class="two1">
+                <label for="work2">Work Place:</label><br>
+                <input type="text" class="entry" name="work2" size="65"><br>
+            
+                <label for="job2">Job Title:</label><br>
+                <input type="text" class="entry" name="job2" size="65"><br>
+            
+                <label for="desc2">Job Description:</label><br>
+                <input type="text" class="entry" name="desc2" size="65"><br>
+            
+                <label for="dateStart2">Start Date:</label>
+                <input type="date" name="dateStart2" id="dateStart2">
+                <label for="dateEnd2" style="padding-left:15px">End Date:</label>
+                <input type="date" name="dateEnd2" id="dateEnd2">
+                <br><br>
+            </div>
+        </div>
+
+        <!-- Personal or business, only one is required to fil out -->
+        <h2>References</h2>
+        <div class="refs">
+            <label for="ref1">Reference:</label><br>
+            <input type="text" class="entry" name="ref1" size="65" required=""><br>
+        
+            <label for="phone1">Telephone Number:</label><br>
+            <input type="text" class="entry" name="phone1" size="65" required=""><br>
+            
+            <label for="ref2">Reference:</label><br>
+            <input type="text" class="entry" name="ref2" size="65"><br>
+        
+            <label for="phone2">Telephone Number:</label><br>
+            <input type="text" class="entry" name="phone2" size="65"><br>
+        </div><hr>
+
+
+        <!-- Button to submit resume opens in a different page -->
+        <div id="btn-container">
+            <input type="submit" name="createResume" class="button" onclick="createResume()" value="Create Resume">
+        </div>
+
+    </form>
+    <script type="text/javascript" src="projectJS.js"></script>
+</body>
+</html>

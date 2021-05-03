@@ -1,0 +1,59 @@
+/*
+    Filename:         final_css.css
+    Supporting Javascript file: projectJS.js
+    Supporting HTML file: final_project.html 
+
+    Created by: Parker Radcliff
+    Date Created: 11/22/2020
+
+    CSS information controls the design of the website, I chose to keep mine a bit more simple, easy to read and follow the flow of as opposed to drastic.
+    I gave my banner a linear color gradient, but the rest is a nice light gray so that it's easy on the eyes. Legibility is very important, but also having
+    something that isn't going to cause strain is too.
+
+*/
+
+html{
+    margin-bottom: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(231, 231, 231);
+    overflow:scroll;
+    overflow-x:hidden;
+    align-items: center;
+    text-align: center;
+}
+
+.form{
+    text-align: center;
+    border-color: black;
+    border-radius: .5em;
+    align-content: center;
+    padding: 2em;
+    
+}
+
+.banner{
+    margin: 0px auto;
+    padding: 0;
+    height: 20%;
+    width: 100%;
+    overflow: hidden;
+    border: solid;
+    background: linear-gradient(to bottom right, #808080 20%, #990000 100%);
+    border-color: rgb(0, 0, 0);
+    border-width: 0px 0px  2px 0px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    text-align: center;
+}
