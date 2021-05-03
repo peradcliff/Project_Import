@@ -1,7 +1,7 @@
 <!--
     Filename:         final.html
     Supporting Javascript file: projectJS.js
-    Supporting CSS file: final_css.css 
+    Supporting CSS file: final_css.css and resume_style.css
 
     Created by: Parker Radcliff
     Date Created: 11/22/2020
@@ -34,202 +34,157 @@
 -->
 <html lang="en"><head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="final_css.css"> <!-- Connecting CSS file -->
+    <link rel="stylesheet" href="final_css.css">
+    <!-- I normally would have my script resource here, but I found that it wouldn't work properly if it was up here, it's down at the bottom -->
     <title>WEB-115 Final Project</title>
 </head>
-<body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed>
+<body>
 
-    <!-- #3, the header banner, I put my section and build your resume on the same, I find having them on the same line more visually appealing -->
-    <header class=banner>
+    <!-- Header == Banner in this case -->
+    <header class="head">
         <h1>Parker Radcliff</h1>
-        <h3>WEB-115 Section 0003 ||
-        Build Your Resume
-    </h3>
+        <h3>WEB-115 Section 0003</h3>
+        <h3>Build Your Resume</h3>
     </header>
 
-    <!-- Fill in form below, contains personal and professional information -->
     <form id="form">
-        <h2 class="personal">Personal Information</h2>
+        <!-- This form consists of information regarding the user, their background and more. Certain information is included like social media, that way the
+        person reviewing the actual resume can see that -->
+        
+        <!-- Personal information including like, social media and normal methods of getting in touch. -->
+        <h2 class="personal_info">Personal Information</h2>
         <label for="name">Enter Your Full Name:</label><br>
-        <input type="text" class="entry" name="name" size="65" required=""><br>
+        <input type="text" class="entry" name="name" size="50"><br>
 
         <label for="state">Enter Your State:</label><br>
-        <select name="state" id="state" required="">
-            <!-- this is a drop down list of all the States-->
-            <option value="AL">Alabama</option>
-            <option value="AK">Alaska</option>
-            <option value="AZ">Arizona</option>
-            <option value="AR">Arkansas</option>
-            <option value="CA">California</option>
-            <option value="CO">Colorado</option>
-            <option value="CT">Connecticut</option>
-            <option value="DE">Delaware</option>
-            <option value="DC">District Of Columbia</option>
-            <option value="FL">Florida</option>
-            <option value="GA">Georgia</option>
-            <option value="HI">Hawaii</option>
-            <option value="ID">Idaho</option>
-            <option value="IL">Illinois</option>
-            <option value="IN">Indiana</option>
-            <option value="IA">Iowa</option>
-            <option value="KS">Kansas</option>
-            <option value="KY">Kentucky</option>
-            <option value="LA">Louisiana</option>
-            <option value="ME">Maine</option>
-            <option value="MD">Maryland</option>
-            <option value="MA">Massachusetts</option>
-            <option value="MI">Michigan</option>
-            <option value="MN">Minnesota</option>
-            <option value="MS">Mississippi</option>
-            <option value="MO">Missouri</option>
-            <option value="MT">Montana</option>
-            <option value="NE">Nebraska</option>
-            <option value="NV">Nevada</option>
-            <option value="NH">New Hampshire</option>
-            <option value="NJ">New Jersey</option>
-            <option value="NM">New Mexico</option>
-            <option value="NY">New York</option>
-            <option value="NC">North Carolina</option>
-            <option value="ND">North Dakota</option>
-            <option value="OH">Ohio</option>
-            <option value="OK">Oklahoma</option>
-            <option value="OR">Oregon</option>
-            <option value="PA">Pennsylvania</option>
-            <option value="RI">Rhode Island</option>
-            <option value="SC">South Carolina</option>
-            <option value="SD">South Dakota</option>
-            <option value="TN">Tennessee</option>
-            <option value="TX">Texas</option>
-            <option value="UT">Utah</option>
-            <option value="VT">Vermont</option>
-            <option value="VA">Virginia</option>
-            <option value="WA">Washington</option>
-            <option value="WV">West Virginia</option>
-            <option value="WI">Wisconsin</option>
-            <option value="WY">Wyoming</option>
-        </select>
+        <input type="text" class="entry" name="state" size="50" required=""><br>
         
-        <br>
         <label for="city">Enter Your City:</label><br>
-        <input type="text" class="entry" name="city" size="65" required=""><br>
-        <!-- Social media was also thrown in here-->
-        <label for="instagram">Enter Your Instagram:</label><br>
-        <input type="text" class="entry" name="instagram" size="65" required=""><br>
-
-        <label for="twitter">Enter Your Twitter:</label><br>
-        <input type="text" class="entry" name="twitter" size="65" required=""><br>
-
-        <label for="linked">Enter Your LinkedIn:</label><br>
-        <input type="text" class="entry" name="linked" size="65" required=""><br>
+        <input type="text" class="entry" name="city" size="50" required=""><br>
 
         <label for="phone">Enter Phone Number:</label><br>
-        <input type="text" class="entry" name="phone" size="65" required=""><br>
+        <input type="text" class="entry" name="phone" size="50" required=""><br>
 
         <label for="email">Enter Your Email Address:</label><br>
-        <input type="text" class="entry" name="email" size="65" validateEmail() required><br>
+        <input type="text" class="entry" name="email" size="50" required=""><br>
+        
+        <label for="instagram">Enter Your Instagram:</label><br>
+        <input type="text" class="entry" name="instagram" size="50" required=""><br>
 
-        <!-- Education details -->
+        <label for="twitter">Enter Your Twitter:</label><br>
+        <input type="text" class="entry" name="twitter" size="50" required=""><br>
+
+        <label for="linked">Enter Your LinkedIn:</label><br>
+        <input type="text" class="entry" name="linked" size="50" required=""><br>
+        <hr>
+
+
+        <!-- Education information, such as highschool and college graduation years -->
         <h2>Education</h2>
         <label for="highschool">Enter High School Attended:</label><br>
-        <input type="text" class="entry" name="highschool" size="65" required=""><br>
-       
+        <input type="text" class="entry" name="highschool" size="50" required=""><br>
+
         <label for="year1">Enter Graduation Year:</label><br>
-        <input type="text" class="entry" name="year1" size="65" required=""><br>
-       
+        <input type="text" class="entry" name="year1" size="50" required=""><br>
+        
+        
         <label for="college">Enter College Attended:</label><br>
-        <input type="text" class="entry" name="college" size="65" required=""><br>
+        <input type="text" class="entry" name="college" size="50" required=""><br>
 
         <label for="year2">Enter Graduation Year:</label><br>
-        <input type="text" class="entry" name="year2" size="65" required=""><br>
+        <input type="text" class="entry" name="year2" size="50" required=""><br>
 
         <label for="degree">Enter Degree Type:</label><br>
-        <input type="text" class="entry" name="degree" size="65">
-        
+        <input type="text" class="entry" name="degree" size="50" required="">
+        <hr>
 
-        <!-- Not very long, but can be adjusted to see more on the page. Just a tiny blurb necessary -->
-        <h2>Professional Summary</h2>
-        <label for="summary">Enter Your Professional Summary:</label><br>
-        <textarea id="summary" class="entry" cols="67" rows="4"></textarea>
 
-        <!-- Skills besides coding, all three required to enter -->
-        <h2>Skills</h2>
-        <label for="skill1">Skill 1:</label><br>
-        <input type="text" class="entry" name="skill1" size="65" required=""><br>
-        <label for="skill2">Skill 2:</label><br>
-        <input type="text" class="entry" name="skill2" size="65" required=""><br>
-        <label for="skill3">Skill 3:</label><br>
-        <input type="text" class="entry" name="skill3" size="65" required="">
-
-        <!-- Tech. skills, all three are required to enter -->
+        <!-- Technical skills, these involve coding languages-->
         <h2>Technical Skills</h2>
+        <p>Enter Your Technical Skills:</p>
+        <p>Example: Python, Java</p>
         <label for="tech_skill1">Technical Skill 1:</label><br>
-        <input type="text" class="entry" name="tech_skill1" size="65" required=""><br>
+        <input type="text" class="entry" name="tech_skill1" size="50"><br>
         <label for="tech_skill2">Technical Skill 2:</label><br>
-        <input type="text" class="entry" name="tech_skill2" size="65" required=""><br>
-        <label for="tech_skill3">Technical Skill 3:</label><br>
-        <input type="text" class="entry" name="tech_skill3" size="65" required="">
+        <input type="text" class="entry" name="tech_skill2" size="50"><br>
+        <hr>
 
-        <!-- Working history of the user. I saw a lot of people did three+, however I only chose to do 2. 1 is required, the second is optional -->
-        <div class="container1">
+        <!-- Skills such as communication and leadership -->
+        <h2>Skills</h2>
+        <p>Enter Your Skills:</p>
+        <p>Example: Communication, Leadership</p>
+        <label for="skill1">Skill 1:</label><br>
+        <input type="text" class="entry" name="skill1" size="50"><br>
+        <label for="skill2">Skill 2:</label><br>
+        <input type="text" class="entry" name="skill2" size="50"><br>
+        <label for="skill3">Skill 3:</label><br>
+        <input type="text" class="entry" name="skill3" size="50">
+        <hr>
+
+
+        <!-- Work history, I only put two because not everyone has worked a large amount of jobs -->
+        <div class="work_history">
             <h2>Work History</h2>
-            <div class="one1">
+            <div class="work_one">
                 <label for="work1">Work Place:</label><br>
-                <input type="text" class="entry" name="work1" size="65" required=""><br>
+                <input type="text" class="entry" name="work1" size="50"><br>
             
                 <label for="job1">Job Title:</label><br>
-                <input type="text" class="entry" name="job1" size="65" required=""><br>
+                <input type="text" class="entry" name="job1" size="50"><br>
             
                 <label for="desc1">Job Description:</label><br>
-                <input type="text" class="entry" name="desc1" size="65" required=""><br>
+                <input type="text" class="entry" name="desc1" size="50"><br>
             
                 <label for="dateStart1">Start Date:</label>
-                <input type="date" name="dateStart1" id="dateStart1" required="">
-                <label for="dateEnd1" style="padding-left:15px">End Date:</label>
-                <input type="date" name="dateEnd1" id="dateEnd1" required="">
+                <input type="date" name="dateStart1" id="dateStart1">
+                <label for="dateEnd1" style="padding-left:10px">End Date:</label>
+                <input type="date" name="dateEnd1" id="dateEnd1">
                 <br><br>
             </div>
             
-            <div class="two1">
+            <div class="work_two">
                 <label for="work2">Work Place:</label><br>
-                <input type="text" class="entry" name="work2" size="65"><br>
+                <input type="text" class="entry" name="work2" size="50"><br>
             
                 <label for="job2">Job Title:</label><br>
-                <input type="text" class="entry" name="job2" size="65"><br>
+                <input type="text" class="entry" name="job2" size="50"><br>
             
                 <label for="desc2">Job Description:</label><br>
-                <input type="text" class="entry" name="desc2" size="65"><br>
+                <input type="text" class="entry" name="desc2" size="50"><br>
             
                 <label for="dateStart2">Start Date:</label>
                 <input type="date" name="dateStart2" id="dateStart2">
-                <label for="dateEnd2" style="padding-left:15px">End Date:</label>
+                <label for="dateEnd2" style="padding-left:10px">End Date:</label>
                 <input type="date" name="dateEnd2" id="dateEnd2">
                 <br><br>
             </div>
         </div>
+        <hr>
 
-        <!-- Personal or business, only one is required to fil out -->
+        <!-- Business and personal references -->
         <h2>References</h2>
-        <div class="refs">
+        <div class="ref1">
             <label for="ref1">Reference:</label><br>
-            <input type="text" class="entry" name="ref1" size="65" required=""><br>
+            <input type="text" class="entry" name="ref1" size="50"><br>
         
             <label for="phone1">Telephone Number:</label><br>
-            <input type="text" class="entry" name="phone1" size="65" required=""><br>
-            
+            <input type="text" class="entry" name="phone1" size="50"><br>
+        </div>
+        
+        <div class="ref2">
             <label for="ref2">Reference:</label><br>
-            <input type="text" class="entry" name="ref2" size="65"><br>
+            <input type="text" class="entry" name="ref2" size="50"><br>
         
             <label for="phone2">Telephone Number:</label><br>
-            <input type="text" class="entry" name="phone2" size="65"><br>
-        </div><hr>
+            <input type="text" class="entry" name="phone2" size="50"><br>
+        </div>
 
-
-        <!-- Button to submit resume opens in a different page -->
+        <!-- Submission button!! -->
         <div id="btn-container">
-            <input type="submit" name="createResume" class="button" onclick="createResume()" value="Create Resume">
+            <input type="submit" name="submitResume" class="button" value="Create Resume">
         </div>
 
     </form>
-    <script type="text/javascript" src="projectJS.js"></script>
+    <script src="projectJS.js"></script>
 </body>
 </html>

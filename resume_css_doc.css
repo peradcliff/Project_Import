@@ -1,19 +1,14 @@
-/*
-    Filename:         final_css.html
+/*  
+    Filename:         resume_css_doc.js
     Supporting Javascript file: projectJS.js
-    Supporting HTML file: final_project.html
+    Supporting HTML files: final_project.html
 
     Created by: Parker Radcliff
     Date Created: 11/22/2020
-
+    
+    This css document is for the actual webpage generated when you hit 'create resume'. It's very simple, but the colors schemes match. I find red carries the eye best
+    so I used red. This resume also looks sort of like my current one, which I personally enjoy.
     Project Description:
-
-    It is time to put your knowledge of JavaScript to work. You’re going to build something useful that you 
-    may even use beyond the scope of this course. Your WEB 115 JavaScript Project requires you to create a personal 
-    resume building tool.
-    Form elements will be used to accept user input which will be assigned to variables. These variable values will 
-    make up the content of a new web page that will be generated when a form button named Create Resume is clicked. 
-    This is called building a web page "on-the-fly".
 
     Tasks -- These were removed as the process continued and replaced with brief 1 sentence description. 
     1. Do some research into resumes.
@@ -31,50 +26,77 @@
     13. Repeat steps 10 and 11 to allow for 2 more prior employment experience data entry areas. 
     14. Use the form textarea tag to create a text entry area with the appropriate label so that the user knows to enter the details of their business references.
     15. Create a form button named Create Resume. When clicked this button should call a function that generates a new web page displaying a resume based on unput.
-
-    CSS information controls the design of the website, I chose to keep mine a bit more simple, easy to read and follow the flow of as opposed to drastic.
-    I gave my banner a linear color gradient, but the rest is a nice light gray so that it's easy on the eyes. Legibility is very important, but also having
-    something that isn't going to cause strain is too.
-
 */
-
-
-
-body {
-    background-color: #d1cdcd;
-    align-items: center;
+header {
     text-align: center;
-}
-
-.head {
-    border: 3px solid black;
-    border-bottom: 0;
-    background: linear-gradient(to bottom right, #808080 20%, #990000 100%);
-    align-items: center;
-    text-align: center;
-}
-
-
-h1, h2, h3 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-#form {
-    border: 3px solid black;
-    padding-left: 1rem;
-}
-
-#form label, p {
+header h1, header p, .edu p, .sum p {
     font-family: 'Courier New', Courier, monospace;
-    margin: 1em 0 0 0;
 }
 
-.btn-container {
+.edu h3, .one h3, .two h3, .all_skills h3, h2 {
     font-family: 'Courier New', Courier, monospace;
-    size: 10px;
+    background-color: #bd5d5d;
+    padding: 5px 0 5px;
+} 
+
+.all_skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-input {
-    margin-bottom: 1rem;
+.tech_skills {
+    grid-column: 1/2;
+    grid-row: 1;
 }
 
+.skills {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+.one li  {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.two li{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.work_one {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.work_two{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.work_history {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.work_history h3 {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #bd5d5d;
+    grid-column: 1/4;
+    grid-row: 1;
+    padding: 5px 0 5px;
+    margin-bottom: 0;
+}
+
+.ref1 {
+    grid-column: 1/2;
+    grid-row: 2;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ref2 {
+    grid-column: 2/3;
+    grid-row: 2;
+    font-family: 'Courier New', Courier, monospace;
+}
